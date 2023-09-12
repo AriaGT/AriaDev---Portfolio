@@ -10,7 +10,7 @@ export const HeaderMessages = {
   },
   portfolio: {
     back: 'Conoce mi trabajo',
-    front: 'Conoce mi *trabajo y los *proyectos que he realizado'
+    front: 'A continuación te enseño todos los *proyectos que he realizado'
   },
   contact: {
     back: 'Generemos resultados',
