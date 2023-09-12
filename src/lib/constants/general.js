@@ -1,8 +1,8 @@
 // Can add a * to make a bold  word
 export const HeaderMessages = {
   main: {
-    back: 'Desarrollo y Diseño',
-    front: 'Desarrollador *web y de *aplicaciones FullStack'
+    back: 'Desarrollo y Análisis',
+    front: '*FullStack en programación de sitios *web y *aplicaciones'
   },
   about: {
     back: 'Trabajo en equipo',
