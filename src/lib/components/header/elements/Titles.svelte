@@ -76,7 +76,7 @@
   @media (width >= 1080px) {
     .title {
       font-size: min(10vw, 12rem);
-      max-width: 960px;
+      max-width: 1080px;
     }
     .subtitle {
       font-size: min(2vw, 3rem);
