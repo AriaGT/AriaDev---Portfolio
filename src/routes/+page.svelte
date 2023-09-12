@@ -1,2 +1,7 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import { Card } from '$lib/components/index'
+  import { route } from '$lib/stores/route.store'
+  route.set('main')
+</script>
+
+<Card />
