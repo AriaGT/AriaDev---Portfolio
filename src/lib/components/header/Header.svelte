@@ -7,7 +7,7 @@
   route.subscribe((value) => (actualRoute = value));
 
   /** @type { Language } */
-  let currentLanguage = "ES";
+  let currentLanguage;
   language.subscribe((value) => (currentLanguage = value));
 </script>
 

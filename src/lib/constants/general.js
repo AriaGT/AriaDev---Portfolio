@@ -53,11 +53,11 @@ export const HeaderMessages = {
 	},
 	EN: {
 		main: {
-			back: 'Development and Analysis',
+			back: 'Develop & Analysis',
 			front: 'FullStack in programming *websites and *applications'
 		},
 		about: {
-			back: 'Teamwork',
+			back: 'Teamwork & Feedback',
 			front: 'I apply *modern *solutions for your projects'
 		},
 		portfolio: {
@@ -65,7 +65,7 @@ export const HeaderMessages = {
 			front: "Below I'll show you all the *projects I've done"
 		},
 		contact: {
-			back: "Let's generate results",
+			back: "Let's go to success",
 			front: 'Contact me to make your *projects come *true'
 		}
 	}

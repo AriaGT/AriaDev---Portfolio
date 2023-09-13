@@ -204,13 +204,3 @@ svg {
 .noscroll {
   overflow-y: hidden;
 }
-
-main {
-  padding: 4rem 1.5rem;
-}
-
-@media (width >=600) {
-  main {
-    padding: 4rem 6rem;
-  }
-}

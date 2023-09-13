@@ -47,7 +47,7 @@
       <span class="logo-text">riaDev</span>
     </a>
     <button class="button button--language" on:click={changeLanguage}>
-      {currentLanguage.toLowerCase()}
+      {currentLanguage.toLowerCase()} /
     </button>
   </div>
   <button class="button button--nav-button" on:click={handlePressMenuButton}

@@ -3,6 +3,4 @@
   route.set("about");
 </script>
 
-<main>
-  <h2>Sobre mí</h2>
-</main>
+<h2>Sobre mí</h2>

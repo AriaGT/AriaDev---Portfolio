@@ -4,4 +4,4 @@
   route.set("main");
 </script>
 
-<Card />
+<h2>Recomendados</h2>
