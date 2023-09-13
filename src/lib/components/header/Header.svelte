@@ -1,15 +1,19 @@
 <script>
-  import { NavMenu, Titles } from './elements'
-  import { route } from '$lib/stores/route.store'
+  import { NavMenu, Titles } from "./elements";
+  import { language, route } from "$lib/stores";
 
   /** @type { Route } */
-  let actual_route
-  route.subscribe((value) => (actual_route = value))
+  let actualRoute;
+  route.subscribe((value) => (actualRoute = value));
+
+  /** @type { Language } */
+  let currentLanguage = "ES";
+  language.subscribe((value) => (currentLanguage = value));
 </script>
 
 <header class="header">
-  <NavMenu {actual_route} />
-  <Titles {actual_route} />
+  <NavMenu {actualRoute} {currentLanguage} />
+  <Titles {actualRoute} {currentLanguage} />
 </header>
 
 <style>

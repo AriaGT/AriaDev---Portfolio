@@ -35,6 +35,7 @@
   --dark-gray: #0f1011;
   --accent-color: #8800ff;
   --dark-accent-color: #251834;
+  --transition-type: cubic-bezier(0.4, 0.25, 0.3, 1);
   --regular-font: Gotham-Medium, Helvetica, Arial, sans-serif;
   --light-font: Gotham-Light, Helvetica, Arial, sans-serif;
   --thin-font: Gotham-Thin, Helvetica, Arial, sans-serif;

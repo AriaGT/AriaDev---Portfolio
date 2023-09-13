@@ -1,24 +1,28 @@
 <script>
-  import { HeaderMessages } from '$lib/constants/general'
+  import { HeaderMessages } from "$lib/constants";
 
   /** @type { Route } */
-  export let actual_route
+  export let actualRoute;
+
+  /** @type { Language } */
+  export let currentLanguage;
 
   /** @type { String[] } */
-  let subtitle_words
-  $: subtitle_words = HeaderMessages[actual_route].front.split(' ')
+  let subtitleWords;
+  $: subtitleWords =
+    HeaderMessages[currentLanguage][actualRoute].front.split(" ");
 </script>
 
 <section class="titles-container">
-  <h1 class="title">{HeaderMessages[actual_route].back}</h1>
+  <h1 class="title">{HeaderMessages[currentLanguage][actualRoute].back}</h1>
   <h2 class="subtitle">
-    {#each subtitle_words as word}
-      {#if word.includes('*')}
+    {#each subtitleWords as word}
+      {#if word.includes("*")}
         <strong class="subtitle--strong">{word.substring(1)}</strong>
       {:else}
         {word}
       {/if}
-      {' '}
+      {" "}
     {/each}
   </h2>
 </section>
@@ -58,9 +62,9 @@
   .subtitle--strong {
     font-family: var(--bold-font);
   }
-  @media (height < 442px) {
+  @media (height < 500px) {
     .title {
-      display: none;
+      opacity: 0.2;
     }
   }
   @media (width >= 600px) {
@@ -81,6 +85,14 @@
     .subtitle {
       font-size: min(2vw, 3rem);
       max-width: 480px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+  }
+  @media (height < 600px) {
+    .subtitle {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);

@@ -1,4 +1,6 @@
-/**
- * Actual route name
- * @typedef { 'main' | 'about' | 'portfolio' | 'contact' } Route
- */
+/** @typedef {(
+ *  'main' |
+ *  'about' |
+ *  'portfolio' |
+ *  'contact'
+ * )} Route */
