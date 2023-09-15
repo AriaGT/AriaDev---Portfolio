@@ -37,11 +37,10 @@
     height: calc(100vh - 8rem);
   }
   .title {
-    font-size: 14vw;
-    max-width: 480px;
+    font-size: 17.5vw;
     width: 100%;
     font-family: var(--bold-font);
-    line-height: 1;
+    line-height: 1.08;
     color: var(--dark-gray);
     text-align: center;
     overflow: hidden;
@@ -50,12 +49,12 @@
     cursor: default;
   }
   .subtitle {
-    font-size: 4vw;
+    font-size: 2rem;
+    line-height: 1.2;
     max-width: 280px;
     width: 100%;
     color: var(--white);
     font-family: var(--light-font);
-    line-height: 1.4;
     text-align: center;
     margin: 0 auto;
   }
@@ -69,21 +68,20 @@
   }
   @media (width >= 600px) {
     .title {
-      font-size: 12vw;
-      max-width: 6000px;
+      font-size: 7.5rem;
     }
     .subtitle {
-      font-size: 3vw;
+      font-size: 2.625rem;
       max-width: 420px;
     }
   }
   @media (width >= 1080px) {
     .title {
       font-size: min(10vw, 12rem);
-      max-width: 1080px;
+      max-width: 1040px;
     }
     .subtitle {
-      font-size: min(2vw, 3rem);
+      font-size: 3.25rem;
       max-width: 480px;
       position: absolute;
       left: 50%;

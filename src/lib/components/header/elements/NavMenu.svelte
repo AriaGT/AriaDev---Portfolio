@@ -37,48 +37,59 @@
 </script>
 
 <nav class="nav-menu">
-  <div style="display: flex;align-items: end;">
-    <a class="logo-container" href={`/${Routes.main}`} data-sveltekit-noscroll>
-      <img
-        class="logo-icon"
-        src="/images/ariaicon512x512.png"
-        alt="header-logo"
-      />
-      <span class="logo-text">riaDev</span>
-    </a>
-    <button class="button button--language" on:click={changeLanguage}>
-      {currentLanguage.toLowerCase()} /
-    </button>
+  <div class="content-box">
+    <div style="display: flex;align-items: end;">
+      <a
+        class="logo-container"
+        href={`/${Routes.main}`}
+        data-sveltekit-noscroll
+      >
+        <img
+          class="logo-icon"
+          src="/images/ariaicon512x512.png"
+          alt="header-logo"
+        />
+        <span class="logo-text">riaDev</span>
+      </a>
+      <button class="button button--language" on:click={changeLanguage}>
+        {currentLanguage.toLowerCase()} /
+      </button>
+    </div>
+    <button class="button button--nav-button" on:click={handlePressMenuButton}
+      >{!menuIsOpen ? "Abrir menú" : "Cerrar menú"}</button
+    >
+    <ul class="nav-list" class:nav-list--close={!menuIsOpen}>
+      {#each NavItems[currentLanguage] as NavItem}
+        <li>
+          <a
+            on:click={() => (menuIsOpen = false)}
+            class="nav-item"
+            class:active={actualRoute === NavItem.route}
+            href={`/${NavItem.route}`}
+          >
+            {NavItem.name}
+          </a>
+        </li>
+      {/each}
+    </ul>
   </div>
-  <button class="button button--nav-button" on:click={handlePressMenuButton}
-    >{!menuIsOpen ? "Abrir menú" : "Cerrar menú"}</button
-  >
-  <ul class="nav-list" class:nav-list--close={!menuIsOpen}>
-    {#each NavItems[currentLanguage] as NavItem}
-      <li>
-        <a
-          on:click={() => (menuIsOpen = false)}
-          class="nav-item"
-          class:active={actualRoute === NavItem.route}
-          href={`/${NavItem.route}`}
-        >
-          {NavItem.name}
-        </a>
-      </li>
-    {/each}
-  </ul>
 </nav>
 
 <style>
   .nav-menu {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
     padding: 2rem 6rem;
     height: 8rem;
     background-color: var(--gray);
     z-index: 10;
+  }
+  .content-box {
+    width: 100%;
+    max-width: 1145px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 0 auto;
   }
   .logo-container {
     display: flex;

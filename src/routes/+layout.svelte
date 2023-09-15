@@ -5,7 +5,7 @@
 
 <div id="svelte-page">
   <Header />
-  <main class="main-content">
+  <main>
     <slot />
   </main>
   <Footer />
@@ -17,16 +17,10 @@
     display: grid;
     place-items: center;
   }
-  .main-content {
-    padding: 4rem 1.5rem;
-    min-height: 36rem;
-    max-width: 1080px;
-  }
-
-  @media (width >=600) {
-    .main-content {
-      padding: 4rem 6rem;
-      min-height: 36rem;
-    }
+  main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
   }
 </style>

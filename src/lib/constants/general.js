@@ -35,16 +35,16 @@ export const NavItems = {
 export const HeaderMessages = {
 	ES: {
 		main: {
-			back: 'Desarrollo y Análisis',
-			front: '*FullStack en programación de sitios *web y *aplicaciones'
+			back: 'AriaDev FullStack',
+			front: '*Desarrollo, diseño *web & *apps'
 		},
 		about: {
 			back: 'Trabajo en equipo',
-			front: 'Aplico *soluciones *modernas para tus proyectos'
+			front: 'Aplico *soluciones *modernas & eficaces'
 		},
 		portfolio: {
 			back: 'Conoce mi trabajo',
-			front: 'A continuación te enseño todos los *proyectos que he realizado'
+			front: 'Descubre todos los *proyectos que he realizado'
 		},
 		contact: {
 			back: 'Generemos resultados',
@@ -53,19 +53,19 @@ export const HeaderMessages = {
 	},
 	EN: {
 		main: {
-			back: 'Develop & Analysis',
-			front: 'FullStack in programming *websites and *applications'
+			back: 'AriaDev FullStack',
+			front: 'Design & build *webs and *apps'
 		},
 		about: {
-			back: 'Teamwork & Feedback',
-			front: 'I apply *modern *solutions for your projects'
+			back: 'Team & Feedback',
+			front: 'Apply *modern *solutions for your projects'
 		},
 		portfolio: {
 			back: 'Know my work',
-			front: "Below I'll show you all the *projects I've done"
+			front: "Discover the *projects I've launched"
 		},
 		contact: {
-			back: "Let's go to success",
+			back: "Go to success",
 			front: 'Contact me to make your *projects come *true'
 		}
 	}

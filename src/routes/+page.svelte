@@ -1,7 +1,12 @@
 <script>
-  import { Card } from "$lib/components/index";
+  import { Presentation } from "$lib/components";
+  import { language } from "$lib/stores";
   import { route } from "$lib/stores/route.store";
   route.set("main");
+
+  /** @type { Language } */
+  let currentLanguage;
+  language.subscribe((value) => (currentLanguage = value));
 </script>
 
-<h2>Recomendados</h2>
+<Presentation {currentLanguage} />
