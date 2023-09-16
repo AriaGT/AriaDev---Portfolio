@@ -1,4 +1,5 @@
 <script>
+  import { MoreButton } from "./";
   import { HeaderMessages } from "$lib/constants";
 
   /** @type { Route } */
@@ -24,6 +25,7 @@
       {/if}
       {" "}
     {/each}
+    <MoreButton />
   </h2>
 </section>
 
@@ -49,6 +51,7 @@
     cursor: default;
   }
   .subtitle {
+    position: relative;
     font-size: 2rem;
     line-height: 1.2;
     max-width: 280px;
