@@ -134,5 +134,9 @@
     .title {
       font-size: 4.5rem;
     }
+    .phrase {
+      font-size: 2rem;
+      margin-top: -1rem;
+    }
   }
 </style>
