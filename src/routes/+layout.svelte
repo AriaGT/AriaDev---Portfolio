@@ -5,7 +5,7 @@
 
 <div id="svelte-page">
   <Header />
-  <main>
+  <main id="page-content">
     <slot />
   </main>
   <Footer />
