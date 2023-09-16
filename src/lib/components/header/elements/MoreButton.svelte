@@ -7,9 +7,10 @@
 
 <style>
   .button {
+    font-family: var(--bold-font);
     font-size: 0.875rem;
     background-color: var(--black);
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.2rem;
     position: absolute;
     top: 100%;
     left: 50%;
