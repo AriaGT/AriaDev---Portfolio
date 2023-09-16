@@ -1,8 +1,8 @@
 export const AboutContent = {
   ES: {
-    title: 'Hola soy Aria',
+    title: 'Hola, soy Aria',
     name: 'Alessandro Fernandez',
-    phrase: 'Me apasiona el mundo digital y el diseño para servir a los usuarios.',
+    phrase: 'Me apasionan las herramientas digitales para servir a los usuarios.',
     description: 'Soy desarrollador Full Stack con experiencia en aplicaciones web front-end y back-end, así como en el desarrollo de aplicaciones móviles y bases de datos, me apasiona aprender nuevas tecnologías y me gusta el diseño.',
     habilities: [
       'Desarrollador Full Stack con 1 año de experiencia en el diseño y desarrollo de aplicaciones web y móviles.',
@@ -20,7 +20,7 @@ export const AboutContent = {
   EN: {
     title: "Hello, I'm Aria",
     name: 'Alessandro Fernandez',
-    phrase: 'I am passionate about the digital world and design to serve users.',
+    phrase: 'I am passionate about digital tools to serve users.',
     description: 'I am a Full Stack developer with experience in front-end and back-end web applications, as well as in the development of mobile applications and databases, I am passionate about learning new technologies and I like design.',
     habilities: [
       'Full Stack Developer with 1 year of experience in the design and development of web and mobile applications.',
