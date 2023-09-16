@@ -112,7 +112,7 @@ li {
 
 /*? Desplazamiento suave en el html */
 html {
-  scroll-behavior: initial;
+  scroll-behavior: smooth;
 }
 
 /*? Eliminamos fuentes por defecto en las etiquetas de texto */
