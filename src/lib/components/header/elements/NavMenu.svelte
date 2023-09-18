@@ -1,5 +1,5 @@
 <script>
-  import { NavItems, Routes } from "$lib/constants";
+  import { NavItems } from "$lib/constants";
   import { LangKeys } from "$lib/constants/langKeys";
   import { language, switchLanguage, i } from "@inlang/sdk-js";
 
