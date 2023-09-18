@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "header": {
+    "main": {
+      "back": "AriaDev FullStack",
+      "front": "Design & build *webs and *apps"
+    },
+    "about": {
+      "back": "Team & Feedback",
+      "front": "Apply *modern *solutions for your projects"
+    },
+    "portfolio": {
+      "back": "Know my work",
+      "front": "Discover the *projects I've launched"
+    },
+    "contact": {
+      "back": "Go to success",
+      "front": "Contact me to make your *projects come *true"
+    }
+  },
+  "change_lang": "en",
+  "presentation": {
+    "title": "Hello, I'm Aria",
+    "name": "Alessandro Fernandez",
+    "phrase": "I am passionate about digital tools to serve users.",
+    "description": "I am a Full Stack developer with experience in front-end and back-end web applications, as well as in the development of mobile applications and databases, I am passionate about learning new technologies and I like design.",
+    "habilities": {
+      "0": "Full Stack Developer with 1 year of experience in the design and development of web and mobile applications.",
+      "1": "Experience in front-end technologies such as HTML, CSS and JavaScript, ensuring an optimal and adaptable user experience.",
+      "2": "Back-end knowledge using languages such as Node.js, Python or PHP, managing databases and server architectures.",
+      "3": "Design of attractive and functional user interfaces, collaborating with design teams to achieve the desired visual identity.",
+      "4": "Skills in testing and debugging, ensuring the quality and performance of applications.",
+      "5": "Experience in creating and maintaining mobile applications using frameworks such as React Native.",
+      "6": "Knowledge in content management systems (CMS) and databases, facilitating the administration and organization of information.",
+      "7": "Ability to learn new technologies and adapt quickly to changes in the world of web development.",
+      "8": "Project management skills, coordinating and supervising multidisciplinary teams for project success.",
+      "9": "Values such as multitasking, problem solving, good communication, attention to detail and curiosity to investigate, contributing to an efficient and collaborative work environment."
+    }
+  }
+}

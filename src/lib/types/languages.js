@@ -1,4 +1,4 @@
-/** @typedef { ('ES' | 'EN') } Language */
+/** @typedef { ('es' | 'en') } Language */
 
 /**
  *  @typedef { Object } Languages

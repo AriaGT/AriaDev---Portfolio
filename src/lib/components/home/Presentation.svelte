@@ -1,15 +1,15 @@
 <script>
   import { AboutContent } from "$lib/constants";
-
-  /** @type { Language } */
-  export let currentLanguage;
+  import { LangKeys } from "$lib/constants/langKeys";
+  import { i } from "@inlang/sdk-js";
+  const currentLanguage = "ES";
 </script>
 
 <section class="section-container">
   <figure class="content-box">
     <hgroup class="titles-box">
       <h2 class="title">{AboutContent[currentLanguage].title}</h2>
-      <h3 class="phrase">{AboutContent[currentLanguage].phrase}</h3>
+      <h3 class="phrase">{i(LangKeys.presentation.phrase)}</h3>
       <span class="name name--boxed">{AboutContent[currentLanguage].name}</span>
     </hgroup>
     <img class="dev-image" src="/images/aria_dev.png" alt="AriaDev" />

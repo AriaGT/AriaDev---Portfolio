@@ -1,21 +1,18 @@
 <script>
   import { MoreButton } from "./";
-  import { HeaderMessages } from "$lib/constants";
+  import { i } from "@inlang/sdk-js";
+  import { LangKeys } from "$lib/constants/langKeys";
 
   /** @type { Route } */
   export let actualRoute;
 
-  /** @type { Language } */
-  export let currentLanguage;
-
   /** @type { String[] } */
   let subtitleWords;
-  $: subtitleWords =
-    HeaderMessages[currentLanguage][actualRoute].front.split(" ");
+  $: subtitleWords = i(LangKeys.header[actualRoute].front).split(" ");
 </script>
 
 <section class="titles-container">
-  <h1 class="title">{HeaderMessages[currentLanguage][actualRoute].back}</h1>
+  <h1 class="title">{i(LangKeys.header[actualRoute].back)}</h1>
   <h2 class="subtitle">
     {#each subtitleWords as word}
       {#if word.includes("*")}
@@ -39,7 +36,7 @@
     height: calc(100vh - 8rem);
   }
   .title {
-    font-size: 17.5vw;
+    font-size: 17vw;
     width: 100%;
     font-family: var(--bold-font);
     line-height: 1.08;
@@ -69,6 +66,14 @@
       opacity: 0.2;
     }
   }
+  @media (height < 600px) {
+    .subtitle {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+  }
   @media (width >= 600px) {
     .title {
       font-size: 7.5rem;
@@ -80,20 +85,12 @@
   }
   @media (width >= 1080px) {
     .title {
-      font-size: min(10vw, 12rem);
+      font-size: min(10vw, 11rem);
       max-width: 1040px;
     }
     .subtitle {
       font-size: 3.25rem;
       max-width: 480px;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-    }
-  }
-  @media (height < 600px) {
-    .subtitle {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);

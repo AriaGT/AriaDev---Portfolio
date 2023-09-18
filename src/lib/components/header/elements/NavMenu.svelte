@@ -1,12 +1,10 @@
 <script>
   import { NavItems, Routes } from "$lib/constants";
-  import { language } from "$lib/stores";
+  import { LangKeys } from "$lib/constants/langKeys";
+  import { language, switchLanguage, i } from "@inlang/sdk-js";
 
   /** @type { Route } */
   export let actualRoute;
-
-  /** @type { Language } */
-  export let currentLanguage;
 
   /** @type { Boolean } */
   let menuIsOpen = false;
@@ -21,29 +19,20 @@
     pageBody?.classList.remove("noscroll");
   };
 
+  /** @type { Object.<string, Language> } */
+  const oppositeLanguageValues = {
+    es: "en",
+    en: "es",
+  };
   const changeLanguage = () => {
-    /** @type { Languages }*/
-    const languages = {
-      es: "ES",
-      en: "EN",
-    };
-    language.set(
-      {
-        ES: languages.en,
-        EN: languages.es,
-      }[currentLanguage]
-    );
+    switchLanguage(oppositeLanguageValues[language]);
   };
 </script>
 
 <nav class="nav-menu">
   <div class="content-box">
     <div style="display: flex;align-items: end;">
-      <a
-        class="logo-container"
-        href={`/${Routes.main}`}
-        data-sveltekit-noscroll
-      >
+      <a class="logo-container" href={`/${language}`} data-sveltekit-noscroll>
         <img
           class="logo-icon"
           src="/images/ariaicon512x512.png"
@@ -52,22 +41,22 @@
         <span class="logo-text">riaDev</span>
       </a>
       <button class="button button--language" on:click={changeLanguage}>
-        {currentLanguage.toLowerCase()} /
+        {oppositeLanguageValues[language]} /
       </button>
     </div>
     <button class="button button--nav-button" on:click={handlePressMenuButton}
       >{!menuIsOpen ? "Abrir menú" : "Cerrar menú"}</button
     >
     <ul class="nav-list" class:nav-list--close={!menuIsOpen}>
-      {#each NavItems[currentLanguage] as NavItem}
+      {#each NavItems as NavItem}
         <li>
           <a
             on:click={() => (menuIsOpen = false)}
             class="nav-item"
-            class:active={actualRoute === NavItem.route}
-            href={`/${NavItem.route}`}
+            class:active={actualRoute === NavItem}
+            href={`/${language}/${NavItem}`}
           >
-            {NavItem.name}
+            {i(LangKeys.nav[NavItem])}
           </a>
         </li>
       {/each}

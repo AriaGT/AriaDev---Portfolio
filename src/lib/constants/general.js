@@ -1,39 +1,10 @@
-/** @type { Object.<Language, NavItem[]> } */
-export const NavItems = {
-	ES: [
-		{
-			name: 'Sobre mí',
-			route: 'about'
-		},
-		{
-			name: 'Portafolio',
-			route: 'portfolio'
-		},
-		{
-			name: 'Contáctame',
-			route: 'contact'
-		}
-	],
-	EN: [
-		{
-			name: 'About me',
-			route: 'about'
-		},
-		{
-			name: 'Portfolio',
-			route: 'portfolio'
-		},
-		{
-			name: 'Contact me',
-			route: 'contact'
-		}
-	],
-};
+/** @type { NavItem[] } */
+export const NavItems = ['about', 'portfolio', 'contact']
 
 // Can add a * to make a bold  word
-/** @type { Object.<Language, Object.<Route, { main: String, front: String }>> } */
+/** @type { Object.<String, Object.<Route, { main: String, front: String }>> } */
 export const HeaderMessages = {
-	ES: {
+	"es": {
 		main: {
 			back: 'AriaDev FullStack',
 			front: '*Desarrollo, diseño *web & *apps'
@@ -51,7 +22,7 @@ export const HeaderMessages = {
 			front: 'Contáctame para hacer *realidad tus proyectos'
 		}
 	},
-	EN: {
+	"en": {
 		main: {
 			back: 'AriaDev FullStack',
 			front: 'Design & build *webs and *apps'
