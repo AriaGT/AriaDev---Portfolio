@@ -16,6 +16,7 @@
   .header {
     width: 100%;
     height: 100vh;
+    max-height: min(200vw, 80rem);
     background-color: var(--gray);
   }
 </style>

@@ -1,68 +1,64 @@
 <script>
-  import { AboutContent } from "$lib/constants";
+  import { GLOBAL_CLASSES } from "$lib/constants/cssClasses";
   import { LangKeys } from "$lib/constants/langKeys";
   import { i } from "@inlang/sdk-js";
   const currentLanguage = "ES";
 </script>
 
-<section class="section-container">
+<section class={GLOBAL_CLASSES.PADDED_SECTION}>
   <figure class="content-box">
     <hgroup class="titles-box">
-      <h2 class="title">{AboutContent[currentLanguage].title}</h2>
+      <h2 class="title">{i(LangKeys.presentation.title)}</h2>
       <h3 class="phrase">{i(LangKeys.presentation.phrase)}</h3>
-      <span class="name name--boxed">{AboutContent[currentLanguage].name}</span>
+      <span class="name name--boxed">Alessandro Fernandez</span>
     </hgroup>
     <img class="dev-image" src="/images/aria_dev.png" alt="AriaDev" />
     <span class="name name--mobile-mode">
-      {AboutContent[currentLanguage].name}
+      Alessandro Fernandez
     </span>
     <figcaption class="description-box">
-      <p class="description">{AboutContent[currentLanguage].description}</p>
+      <p class="description">{i(LangKeys.presentation.description)}</p>
     </figcaption>
   </figure>
 </section>
 
 <style>
-  .section-container {
-    background-color: var(--gray);
-    padding: 4rem 1.5rem;
-    width: 100%;
-  }
   .content-box {
     position: relative;
     width: 100%;
     max-width: 1145px;
-    margin: 0 auto;
+    margin: 0 auto calc( var(--rem) * 4 );
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--rem);
   }
   .titles-box {
     display: grid;
     align-items: end;
-    gap: 1rem;
+    gap: var(--rem);
   }
   .title {
     color: var(--dark-gray);
-    font-size: 2.625rem;
+    font-size: calc( var(--rem) * 2.625 );
     line-height: 0.9;
     font-family: var(--bold-font);
   }
   .phrase {
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: calc( var(--rem) * 1.5 );
     line-height: 1.2;
   }
   .dev-image {
     width: 100%;
+    max-width: calc( var(--rem) * 35.8 );
     filter: brightness(0.8) contrast(0.8);
   }
   .name {
     color: var(--accent-color);
     font-family: var(--book-font);
-    font-size: 1.25rem;
+    font-size: calc( var(--rem) * 1.25 );
     position: relative;
-    padding-left: calc(100% - 222px);
+    padding-left: calc(100% - calc(var(--pixel) * 222));
     overflow-wrap: normal;
     white-space: nowrap;
   }
@@ -72,8 +68,8 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: calc(100% - 240px);
-    height: 1px;
+    width: calc(100% - calc(var(--pixel) * 240));
+    height: var(--pixel);
     background-color: var(--light-gray);
   }
   .name--boxed {
@@ -85,13 +81,14 @@
   .description {
     color: var(--light-gray);
     font-family: var(--book-font);
-    font-size: 0.95rem;
+    font-size: calc( var(--rem) * 1.2 );
   }
   @media (width >= 600px) {
-    .section-container {
-      padding: 4rem 2.5rem;
-      min-height: 36rem;
+    .title {
+      font-size: 3.4375rem;
     }
+  }
+  @media (width >= 1150px) {
     .dev-image {
       width: 60%;
       max-width: 972px;
@@ -106,7 +103,11 @@
       overflow-wrap: normal;
     }
     .title {
-      font-size: 3.4375rem;
+      font-size: 4.5rem;
+    }
+    .phrase {
+      font-size: 2rem;
+      margin-top: -1rem;
     }
     .name {
       position: relative;
@@ -124,19 +125,10 @@
     .description-box {
       position: absolute;
       top: 60%;
-      right: 0;
+      right: -8rem;
       padding: 1.75rem 0 0 2rem;
-      width: 43%;
-      max-width: 330px;
-    }
-  }
-  @media (width >= 1150px) {
-    .title {
-      font-size: 4.5rem;
-    }
-    .phrase {
-      font-size: 2rem;
-      margin-top: -1rem;
+      width: 50%;
+      max-width: 400px;
     }
   }
 </style>

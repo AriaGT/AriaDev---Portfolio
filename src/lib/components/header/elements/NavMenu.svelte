@@ -71,6 +71,7 @@
     height: 8rem;
     background-color: var(--gray);
     z-index: 10;
+    font-family: var(--regular-font);
   }
   .content-box {
     width: 100%;
@@ -86,24 +87,27 @@
     transition: filter 200ms var(--transition-type);
   }
   .logo-container:hover {
-    filter: drop-shadow(-0.5rem 0.2rem 3rem var(--white));
+    filter: drop-shadow(
+      calc( var(--rem) * -.5 )
+      calc( var(--rem) * .2 )
+      calc( var(--rem) * 3 )
+      var(--white)
+    );
   }
   .logo-icon {
     width: 4rem;
   }
   .logo-text {
+    line-height: 1.4;
     color: var(--white);
     margin-bottom: 0.875rem;
-    font-size: 1.4rem;
-    line-height: 1.4rem;
     font-family: var(--bold-font);
   }
   .button {
     cursor: pointer;
     color: var(--light-gray);
     margin-bottom: 0.875rem;
-    font-size: 0.875rem;
-    line-height: 1rem;
+    font-size: calc( var(--rem) * .875 );
     transition: color 125ms var(--transition-type);
   }
   .button:hover {
@@ -111,7 +115,8 @@
   }
   .button--language {
     text-transform: capitalize;
-    margin-left: 2rem;
+    margin-left: calc( var(--rem) * 2 );
+    font-family: inherit;
   }
   .button--nav-button {
     display: none;
@@ -120,7 +125,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 3rem;
+    gap: calc( var(--rem) * 3 );
   }
   .nav-item {
     display: flex;
@@ -128,11 +133,12 @@
     margin-bottom: 0.875rem;
     position: relative;
     font-size: 0.875rem;
-    line-height: 1rem;
+    line-height: var(--rem);
     color: var(--light-gray);
     font-weight: 500;
     text-align: center;
     transition: color 125ms var(--transition-type);
+    font-family: inherit;
   }
   .nav-item:hover {
     color: var(--white);
@@ -157,23 +163,23 @@
   }
   @media (width < 768px) {
     .logo-icon {
-      width: 2.5rem;
+      width: calc( var(--rem) * 6 );
     }
     .logo-text {
-      font-size: 1rem;
-      margin-bottom: 0.4rem;
+      font-size: calc( var(--rem) * 2.1 );
+      margin-bottom: calc( var(--rem) * 1.2 );
     }
     .button {
-      font-size: 0.725rem;
-      margin-bottom: 0.475rem;
+      font-size: calc( var(--rem) * 1.8 );
+      margin-bottom: calc( var(--rem) * 1.2 );
     }
     .button--nav-button {
       display: block;
     }
     .nav-menu {
       position: relative;
-      height: 4.5rem;
-      padding: 1rem 1.5rem;
+      height: calc( var(--rem) * 8 );
+      padding: var(--rem) calc( var(--rem) * 1 );
     }
     .nav-list {
       pointer-events: all;
@@ -182,12 +188,12 @@
       justify-content: center;
       position: fixed;
       flex-direction: column;
-      top: 6rem;
+      top: calc( var(--rem) * 6 );
       left: 0;
       width: 100%;
-      height: calc(100vh - 6rem);
+      height: calc(100vh - calc( var(--rem) * 6 ));
       transition: opacity 0.2s;
-      padding-bottom: 8rem;
+      padding-bottom: calc( var(--rem) * 8 );
     }
     .nav-list--close {
       pointer-events: none;

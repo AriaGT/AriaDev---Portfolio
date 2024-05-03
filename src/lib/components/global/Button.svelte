@@ -1,5 +1,10 @@
-<button on:click={() => (window.location.href = "#main-content")}>
-  Saber más
+<script>
+  export let /** @type {string} */ href
+  export let /** @type {string} */ text
+</script>
+
+<button on:click={() => (window.location.href = href)}>
+  {text}
 </button>
 
 <style>

@@ -20,25 +20,80 @@
     "contact": {
       "back": "Go to success",
       "front": "Contact me to make your *projects come *true"
-    }
+    },
+    "more_button": "See more",
+    "cv_button": "Download CV"
   },
   "change_lang": "en",
   "presentation": {
     "title": "Hello, I'm Aria",
     "name": "Alessandro Fernandez",
     "phrase": "I am passionate about digital tools to serve users.",
-    "description": "I am a Full Stack developer with experience in front-end and back-end web applications, as well as in the development of mobile applications and databases, I am passionate about learning new technologies and I like design.",
-    "habilities": {
-      "0": "Full Stack Developer with 1 year of experience in the design and development of web and mobile applications.",
-      "1": "Experience in front-end technologies such as HTML, CSS and JavaScript, ensuring an optimal and adaptable user experience.",
-      "2": "Back-end knowledge using languages such as Node.js, Python or PHP, managing databases and server architectures.",
-      "3": "Design of attractive and functional user interfaces, collaborating with design teams to achieve the desired visual identity.",
-      "4": "Skills in testing and debugging, ensuring the quality and performance of applications.",
-      "5": "Experience in creating and maintaining mobile applications using frameworks such as React Native.",
-      "6": "Knowledge in content management systems (CMS) and databases, facilitating the administration and organization of information.",
-      "7": "Ability to learn new technologies and adapt quickly to changes in the world of web development.",
-      "8": "Project management skills, coordinating and supervising multidisciplinary teams for project success.",
-      "9": "Values such as multitasking, problem solving, good communication, attention to detail and curiosity to investigate, contributing to an efficient and collaborative work environment."
-    }
+    "description": "I am a Full Stack developer with experience in front-end and back-end web applications, as well as in the development of mobile applications and databases, I am passionate about learning new technologies and I like design."
+  },
+  "skills": {
+    "title": "My skills",
+    "skills_list": {
+      "0": {
+        "description": "Full Stack Developer with 1 year of experience in designing and developing web and mobile applications.",
+        "skill_items": {
+          "0": "Web Pages",
+          "1": "Rest API",
+          "2": "Databases",
+          "3": "Android Development"
+        }
+      },
+      "1": {
+        "description": "Experience in modern front-end technologies, ensuring an optimal and adaptable user experience.",
+        "skill_items": {
+          "0": "HTML5",
+          "1": "CSS3",
+          "2": "TypeScript",
+          "3": "React",
+          "4": "Next",
+          "5": "Angular",
+          "6": "Vue",
+          "7": "SvelteKit",
+          "8": "React Native",
+          "9": "Flutter"
+        }
+      },
+      "2": {
+        "description": "Knowledge in back-end, server applications, databases, and content management systems (CMS).",
+        "skill_items": {
+          "0": "SQL",
+          "1": "Python",
+          "2": "Flask",
+          "3": "Node",
+          "4": "Express",
+          "5": "Strapi"
+        }
+      },
+      "3": {
+        "description": "Designing attractive and functional user interfaces, collaborating with design teams to achieve the desired visual identity.",
+        "skill_items": {
+          "0": "Figma",
+          "1": "Photoshop",
+          "2": "SVG"
+        }
+      },
+      "4": {
+        "description": "Project management skills, coordinating and supervising multidisciplinary teams for project success.",
+        "skill_items": {
+          "0": "Gantt Charts",
+          "1": "Flow Diagram",
+          "2": "Miro",
+          "3": "Jira",
+          "4": "ClickUp"
+        }
+      }
+    },
+    "home_button": "Discover all"
+  },
+  "footer": {
+    "email": "Email",
+    "phone": "Phone",
+    "linkedin": "LinkedIn",
+    "linkedin_message": "Visit my profile"
   }
 }

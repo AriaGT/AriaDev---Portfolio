@@ -1,7 +1,8 @@
 <script>
-  import { MoreButton } from "./";
+  import { CVButton } from "./";
   import { i } from "@inlang/sdk-js";
   import { LangKeys } from "$lib/constants/langKeys";
+  import { Button } from "$lib/components";
 
   /** @type { Route } */
   export let actualRoute;
@@ -22,8 +23,11 @@
       {/if}
       {" "}
     {/each}
-    <MoreButton />
   </h2>
+  <div class="buttons-container">
+    <Button href="#main-content" text={i(LangKeys.header.more_button)} />
+    <Button href="#main-content" text={i(LangKeys.header.cv_button)} />
+  </div>
 </section>
 
 <style>
@@ -32,8 +36,8 @@
     place-items: center;
     place-content: center;
     width: 100%;
-    padding-bottom: 8rem;
-    height: calc(100vh - 8rem);
+    padding-bottom: calc( var(--rem) * 8 );
+    height: calc( 100% - calc( var(--rem) * 8 ) );
   }
   .title {
     font-size: 17vw;
@@ -44,14 +48,14 @@
     text-align: center;
     overflow: hidden;
     word-wrap: break-word;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto calc( var(--rem) * 2 ) auto;
     cursor: default;
   }
   .subtitle {
     position: relative;
-    font-size: 2rem;
+    font-size: calc( var(--rem) * 2.2 );
     line-height: 1.2;
-    max-width: 280px;
+    max-width: calc( var(--rem) * 30 );
     width: 100%;
     color: var(--white);
     font-family: var(--light-font);
@@ -60,6 +64,16 @@
   }
   .subtitle--strong {
     font-family: var(--bold-font);
+  }
+  .buttons-container {
+    position: relative;
+    top: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: calc( var(--rem) * 2 );
+    z-index: 1;
+    flex-direction: column;
   }
   @media (height < 500px) {
     .title {
@@ -80,7 +94,10 @@
     }
     .subtitle {
       font-size: 2.625rem;
-      max-width: 420px;
+      max-width: 36rem;
+    }
+    .buttons-container {
+      flex-direction: row;
     }
   }
   @media (width >= 1080px) {
@@ -90,7 +107,7 @@
     }
     .subtitle {
       font-size: 3.25rem;
-      max-width: 480px;
+      max-width: 48rem;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);

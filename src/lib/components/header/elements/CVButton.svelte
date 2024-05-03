@@ -1,5 +1,5 @@
-<button on:click={() => (window.location.href = "#main-content")}>
-  Saber más
+<button on:click={() => (window.location.href = "#page-content")}>
+  Descargar CV
 </button>
 
 <style>

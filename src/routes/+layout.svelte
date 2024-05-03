@@ -1,11 +1,11 @@
 <script>
   import { Header, Footer } from "$lib/components";
-  import "../app.css";
+  import "../reset.css"; import "../app.css";
 </script>
 
 <div id="svelte-page">
   <Header />
-  <main id="page-content">
+  <main id="main-content">
     <slot />
   </main>
   <Footer />
@@ -13,13 +13,14 @@
 
 <style>
   #svelte-page {
-    max-height: 100vh;
+    min-height: 100vh;
     display: grid;
-    place-items: center;
+    grid-template-rows: auto 1fr auto;
   }
-  main {
+  #main-content {
     display: flex;
     width: 100%;
+    height: auto;
     justify-content: center;
     overflow: hidden;
   }

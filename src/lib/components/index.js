@@ -1,7 +1,7 @@
 //* GENERAL COMPONENTS
 export { default as Header } from './header/Header.svelte';
 export { default as Footer } from './footer/Footer.svelte';
-export { default as Presentation } from './home/Presentation.svelte';
+export * from './home';
 
 //* REUSABLE COMPONENTS
-export { default as Card } from './global/Card.svelte';
+export * from './global';

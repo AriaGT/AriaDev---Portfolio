@@ -47,6 +47,79 @@
   --thin-font: Gotham-Thin, Helvetica, Arial, sans-serif;
   --bold-font: Gotham-Bold, Helvetica, Arial, sans-serif;
   --black-font: Gotham-Black, Helvetica, Arial, sans-serif;
+  --pixel: min(0.15625vw, 0.0625rem);
+  --rem: min(2.5vw, 1rem);
+}
+
+h1, h2, h3, h4 {
+  color: var(--white);
+  text-wrap: balance;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: calc(var(--rem) * 2.8);
+}
+
+h2 {
+  font-size: calc(var(--rem) * 2);
+  margin-bottom: min(2.5vw, 1rem);
+}
+
+h3 {
+  font-size: calc(var(--rem) * 1.6);
+  margin-bottom: min(2vw, .8rem);
+}
+
+h4 {
+  font-size: calc(var(--rem) * 1.2);
+}
+
+a,
+form,
+select,
+button,
+p,
+input,
+label,
+textarea {
+  color: var(--light-gray);
+  font-size: calc(var(--rem) * 1.6);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (width >=576px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  a,
+  form,
+  select,
+  button,
+  p,
+  input,
+  label,
+  textarea {
+    font-family: var(--book-font);
+    font-weight: normal;
+    font-size: 1.2rem;
+  }
 }
 
 /*? Variables contraste alto */
@@ -67,146 +140,29 @@
   }
 }
 
-/*? Eliminar margenes, relleno, dimensiones y alineación de contenido en contenedores */
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: baseline;
-}
-
-/*? Hacer que las imagenes y videos se adapten a su contenedor */
-img,
-picture,
-video,
-iframe,
-figure {
-  max-width: 100%;
-  width: 100%;
-  display: block;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center center;
-  object-position: center center;
-}
-
-/*? Ajustamos la etiqueta <a> como contenedor */
-a {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  font-size: inherit;
-}
-
-/*? Ajustamos la etiqueta <a> como texto */
-p a {
-  display: inline;
-}
-
-/*? Retirar estilos de elementos de listas */
-li {
-  list-style-type: none;
-}
-
-/*? Desplazamiento suave en el html */
-html {
-  scroll-behavior: smooth;
-}
-
-/*? Eliminamos fuentes por defecto en las etiquetas de texto */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-a,
-strong,
-blockquote,
-i,
-b,
-u,
-em {
-  font-size: 1em;
-  font-weight: inherit;
-  font-style: inherit;
-  text-decoration: none;
-  color: inherit;
-  overflow-wrap: break-word;
-}
-
-/*? Configuramos la tipografía para toda la web */
-body {
-  min-height: 100vh;
-  font-size: 100%;
-  font-family: var(--regular-font);
-  color: var(--black);
-  background-color: var(--white);
-  line-height: 1.4em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/*? Evitamos problemas con los pseudoelementos de quotes */
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-/*? Configuramos el texto que seleccionamos */
-::-moz-selection {
-  background-color: var(--black);
-  color: var(--white);
-}
-
-::selection {
-  background-color: var(--black);
-  color: var(--white);
-}
-
-/*? Nivelamos problemas de tipografías y colocación de formularios */
-form,
-input,
-textarea,
-select,
-button,
-label {
-  font-family: inherit;
-  font-size: inherit;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  background-color: transparent;
-  color: inherit;
-  display: block;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-/*? Reseteamos las tablas */
-table,
-tr,
-td {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/*? Evitamos problemas con los SVG */
-svg {
-  width: 100%;
-  display: block;
-  fill: currentColor;
-}
-
 /*? Global app Styles */
 .noscroll {
   overflow-y: hidden;
+}
+
+.sections-container {
+  padding: min(8vw, 4rem) 0;
+}
+
+.padded-section {
+  padding: min(5vw, 2rem) min(10%, 4rem);
+}
+
+@media (width >= 600px) {
+  .sections-container {
+		display: flex;
+		flex-direction: column;
+    width: 100%;
+    max-width: 1028px;
+		margin: 0 auto;
+  }
+  .padded-section {
+    padding: min(5vw, 2rem) min(15%, 6rem);
+    max-width: 1028px;
+  }
 }

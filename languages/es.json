@@ -20,25 +20,80 @@
     "contact": {
       "back": "Generemos resultados",
       "front": "Contáctame para hacer *realidad tus proyectos"
-    }
+    },
+    "more_button": "Saber más",
+    "cv_button": "Descargar CV"
   },
   "change_lang": "en",
   "presentation": {
     "title": "Hola, soy Aria",
     "name": "Alessandro Fernandez",
     "phrase": "Me apasionan las herramientas digitales para servir a los usuarios.",
-    "description": "Soy desarrollador Full Stack con experiencia en aplicaciones web front-end y back-end, así como en el desarrollo de aplicaciones móviles y bases de datos, me apasiona aprender nuevas tecnologías y me gusta el diseño.",
-    "habilities": {
-      "0": "Desarrollador Full Stack con 1 año de experiencia en el diseño y desarrollo de aplicaciones web y móviles.",
-      "1": "Experiencia en tecnologías front-end como HTML, CSS y JavaScript, garantizando una experiencia de usuario óptima y adaptable.",
-      "2": "Conocimientos en back-end utilizando lenguajes como Node.js, Python o PHP, gestionando bases de datos y arquitecturas de servidores.",
-      "3": "Diseño de interfaces de usuario atractivas y funcionales, colaborando con equipos de diseño para lograr la identidad visual deseada.",
-      "4": "Habilidades en pruebas y depuración, garantizando la calidad y el rendimiento de las aplicaciones.",
-      "5": "Experiencia en la creación y mantenimiento de aplicaciones móviles utilizando frameworks como React Native.",
-      "6": "Conocimientos en sistemas de gestión de contenidos (CMS) y bases de datos, facilitando la administración y organización de la información.",
-      "7": "Capacidad para aprender nuevas tecnologías y adaptarse rápidamente a los cambios en el mundo del desarrollo web.",
-      "8": "Habilidades de gestión de proyectos, coordinando y supervisando equipos multidisciplinarios para el éxito de los proyectos.",
-      "9": "Valores como la multitarea, resolución de problemas, buena comunicación, atención al detalle y curiosidad para investigar, contribuyendo a un ambiente de trabajo eficiente y colaborativo."
-    }
+    "description": "Soy desarrollador Full Stack con experiencia en aplicaciones web front-end y back-end, así como en el desarrollo de aplicaciones móviles y bases de datos, me apasiona aprender nuevas tecnologías y me gusta el diseño."
+  },
+  "skills": {
+    "title": "Mis habilidades",
+    "skills_list": {
+      "0": {
+        "description": "Desarrollador Full Stack con 1 año de experiencia en el diseño y desarrollo de aplicaciones web y móviles.",
+        "skill_items": {
+          "0": "Páginas Web",
+          "1": "API Rest",
+          "2": "Bases de Datos",
+          "3": "Desarrollo Android"
+        }
+      },
+      "1": {
+        "description": "Experiencia en tecnologías front-end modernas, garantizando una experiencia de usuario óptima y adaptable.",
+        "skill_items": {
+          "0": "HTML5",
+          "1": "CSS3",
+          "2": "TypeScript",
+          "3": "React",
+          "4": "Next",
+          "5": "Angular",
+          "6": "Vue",
+          "7": "SvelteKit",
+          "8": "React Native",
+          "9": "Flutter"
+        }
+      },
+      "2": {
+        "description": "Conocimientos en back-end, aplicaiones de servidor, bases de datos y sistemas de gestión de contenidos (CMS).",
+        "skill_items": {
+          "0": "SQL",
+          "1": "Python",
+          "2": "Flask",
+          "3": "Node",
+          "4": "Express",
+          "5": "Strapi"
+        }
+      },
+      "3": {
+        "description": "Diseño de interfaces de usuario atractivas y funcionales, colaborando con equipos de diseño para lograr la identidad visual deseada.",
+        "skill_items": {
+          "0": "Figma",
+          "1": "Photoshop",
+          "2": "SVG"
+        }
+      },
+      "4": {
+        "description": "Habilidades de gestión de proyectos, coordinando y supervisando equipos multidisciplinarios para el éxito de los proyectos.",
+        "skill_items": {
+          "0": "Diagramas de Gantt",
+          "1": "Diagrama de Flujo",
+          "2": "Miro",
+          "3": "Jira",
+          "4": "ClickUp"
+        }
+      }
+    },
+    "home_button": "Ver todas"
+  },
+  "footer": {
+    "email": "Email",
+    "phone": "Número",
+    "linkedin": "LinkedIn",
+    "linkedin_message": "Visita mi perfil"
   }
 }
