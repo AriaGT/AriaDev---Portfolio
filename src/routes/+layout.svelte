@@ -19,6 +19,7 @@
   }
   #main-content {
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: auto;
     justify-content: center;

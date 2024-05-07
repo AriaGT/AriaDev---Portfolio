@@ -9,12 +9,13 @@
 
 <style>
   a {
-    display: flex;
+    display: inline-block;
   }
   a:hover {
     text-decoration: underline;
   }
   i {
-    transform: scale(.5);
+    transform: translateX( calc( var(--pixel) * -7 ) ) scale(.5);
+    vertical-align: top;
   }
 </style>

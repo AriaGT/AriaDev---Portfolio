@@ -41,7 +41,6 @@
     margin-bottom: calc( var(--rem) * 2 );
   }
   .skills-organizator {
-    margin-top: calc( var(--rem) * 4 );
     display: flex;
     flex-direction: column;
     gap: calc( var(--rem) * 4 );

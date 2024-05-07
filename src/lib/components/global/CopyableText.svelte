@@ -1,5 +1,6 @@
 <script>
   export let /** @type { string } */ text
+  export let /** @type { number } */ iconSize = 1.2
 
   let copyStatus = false
 
@@ -16,22 +17,36 @@
 <button
   class:copyed={copyStatus}
   on:click={copyText}
+  style:font-size="min({iconSize * 2.5}vw, {iconSize}rem)"
 >
-  <slot />
+  <span style:font-size="inherit">
+    <slot />
+  </span>
   {#if !copyStatus}
-    <i class="fa-regular fa-clipboard"></i>
+    <i
+      style:margin-bottom="min({iconSize/3.2 * 2.5}vw, {iconSize/3.2}rem)"
+      class="fa-regular fa-clipboard"
+    />
   {:else}
-    <i class="fa-solid fa-clipboard-check"></i>
+    <i
+      style:margin-bottom="min({iconSize/3.2 * 2.5}vw, {iconSize/3.2}rem)"
+      class="fa-solid fa-clipboard-check"
+    />
   {/if}
 </button>
 
 <style>
   button {
-    display: flex;
+    display: inline-block;
+    justify-content: flex-start;
     gap: calc( var(--rem) * .5 );
-    align-items: center;
+    align-items: end;
+  }
+  span {
+    display: inline-block;
   }
   i {
+    display: inline-block;
     transition: opacity .1s;
     opacity: 0;
   }

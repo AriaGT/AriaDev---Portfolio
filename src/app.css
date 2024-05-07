@@ -63,7 +63,7 @@ h1 {
 
 h2 {
   font-size: calc(var(--rem) * 2);
-  margin-bottom: min(2.5vw, 1rem);
+  margin-bottom: min(12.5vw, 5rem);
 }
 
 h3 {
@@ -80,11 +80,12 @@ form,
 select,
 button,
 p,
+span,
 input,
 label,
 textarea {
   color: var(--light-gray);
-  font-size: calc(var(--rem) * 1.6);
+  font-size: calc(var(--rem) * 1.2);
   line-height: 1.5;
   text-wrap: pretty;
 }
@@ -113,6 +114,7 @@ button {
   select,
   button,
   p,
+  span,
   input,
   label,
   textarea {
@@ -150,6 +152,7 @@ button {
 }
 
 .padded-section {
+  width: 100%;
   padding: min(5vw, 2rem) min(10%, 4rem);
 }
 

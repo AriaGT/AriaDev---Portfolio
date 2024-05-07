@@ -1,9 +1,11 @@
 <script>
-  export let /** @type {string} */ href
+  export let /** @type {string} */ href = ""
+  export let /** @type {() => void} */ onClick = () => null
   export let /** @type {string} */ text
+
 </script>
 
-<button on:click={() => (window.location.href = href)}>
+<button on:click={() => onClick || (window.location.href = href)}>
   {text}
 </button>
 

@@ -7,9 +7,15 @@
   let highlightedItemIndex = 0
 
   onMount(() => {
+    const randomlyOrderedIndexList = items.map((_, i) => i).sort(() => Math.random() - 0.5)
+    let actualIndex = 0
     setInterval(() => {
-      highlightedItemIndex = highlightedItemIndex < items.length -1 ? highlightedItemIndex +1 : 0
-    }, 1600);
+      if (actualIndex > randomlyOrderedIndexList.length -1) {
+        actualIndex = 0
+        randomlyOrderedIndexList.sort(() => Math.random() - 0.5)
+      }
+      highlightedItemIndex = randomlyOrderedIndexList[actualIndex++]
+    }, 2400);
   });
 </script>
 
@@ -35,9 +41,10 @@
   .item {
     position: relative;
     padding: var(--rem) calc( var(--rem) * 2 );
-    background-color: var(--black);
+    background-color: var(--dark-gray);
     color: var(--white);
     transition: transform 1.6s var(--transition-type),
+                color 1.6s var(--transition-type),
                 background-color 1.6s var(--transition-type);
   }
   .item::before,
@@ -47,7 +54,8 @@
     z-index: -1;
     width: 50%;
     height: 0%;
-    background-color: var(--black);
+    background-color: var(--dark-gray);
+    color: var(--white);
     transition: height .8s var(--transition-type),
                 background-color 1.6s var(--transition-type);
   }
@@ -61,13 +69,14 @@
   }
 
   .highlighted {
-    background-color: var(--dark-accent-color);
+    background-color: var(--light-gray);
+    color: var(--black);
     transform: translateY( calc( var(--rem) * -.5 ) );
   }
 
   .highlighted::before,
   .highlighted::after {
     height: 50%;
-    background-color: var(--dark-accent-color);
+    background-color: var(--light-gray);
   }
 </style>
