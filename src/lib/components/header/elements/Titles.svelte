@@ -1,5 +1,4 @@
 <script>
-  import { CVButton } from "./";
   import { i } from "@inlang/sdk-js";
   import { LangKeys } from "$lib/constants/langKeys";
   import { Button } from "$lib/components";
@@ -10,6 +9,16 @@
   /** @type { String[] } */
   let subtitleWords;
   $: subtitleWords = i(LangKeys.header[actualRoute].front).split(" ");
+
+  const downloadCV = () => {
+    const url = new URL('/src/assets/cv_file.pdf', import.meta.url);
+    const link = document.createElement('a');
+    link.href = url.href;
+    link.download = 'CV - ALESSANDRO FERNANDEZ.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 </script>
 
 <section class="titles-container">
@@ -26,7 +35,7 @@
   </h2>
   <div class="buttons-container">
     <Button href="#main-content" text={i(LangKeys.header.more_button)} />
-    <Button href="#main-content" text={i(LangKeys.header.cv_button)} />
+    <Button onClick={downloadCV} text={i(LangKeys.header.cv_button)} />
   </div>
 </section>
 
