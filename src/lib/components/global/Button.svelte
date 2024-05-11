@@ -1,11 +1,22 @@
 <script>
-  export let /** @type {string} */ href = ""
+  export let /** @type {string | null} */ href = null
   export let /** @type {(() => void) | null} */ onClick = null
   export let /** @type {string} */ text
+  export let /** @type { "button" | "submit" } */ type = "button"
+  export let /** @type {boolean} */ disabled = false
+
+  const handleClick = () => {
+    if (onClick) onClick()
+    if (href) window.location.href = href
+  }
 
 </script>
 
-<button on:click={() => onClick ? onClick() : (window.location.href = href)}>
+<button
+  {type}
+  {disabled}
+  on:click={handleClick}
+>
   {text}
 </button>
 
@@ -19,6 +30,10 @@
     cursor: pointer;
     transition: background 150ms var(--transition-type);
     min-width: calc(var(--rem) * 2);
+  }
+  button:disabled {
+    pointer-events: none;
+    background-color: var(--light-gray);
   }
   button:hover {
     background-color: var(--accent-color);

@@ -17,10 +17,15 @@
 		"svelte": "^4.0.5",
 		"svelte-check": "^3.4.3",
 		"typescript": "^5.0.0",
-		"vite": "4.4.2"
+		"vite": "^4.5.3"
 	},
 	"type": "module",
 	"dependencies": {
-		"@inlang/sdk-js": "0.11.8"
+		"@inlang/sdk-js": "0.11.8",
+		"axios": "^1.6.8",
+		"nodemailer": "^6.9.13",
+		"svelte-email": "^0.0.4",
+		"svelte-forms-lib": "^2.0.1",
+		"yup": "^1.4.0"
 	}
 }

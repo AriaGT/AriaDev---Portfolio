@@ -1,28 +1,59 @@
 <script>
   import { GLOBAL_CLASSES } from "$lib/constants/cssClasses";
   import { CopyableText, Button } from "$lib/components";
+  import axios from "axios"
+  import * as yup from "yup"
+  import { createForm } from "svelte-forms-lib"
+
+  const validationSchema = yup.object().shape({
+    name: yup.string().required('Please enter a name'),
+    organization: yup.string().optional(),
+    message: yup.string().required('Please enter a message')
+  })
+
+  /** @type { (config: { name: string, organization?: string, message: string }) => Promise<void> } */
+  const sendEmail = async ({ name, organization, message }) =>
+    axios.post('/api/send-email', { name, organization, message })
+      .then(() => console.log('EMAIL ENVIADO'))
+
+  let form_button_active = false
+
+  const { form, handleChange, handleSubmit, isSubmitting } = createForm({
+    initialValues: { name: "", organization: "", message: "" },
+    onSubmit: async values => {
+      validationSchema.validate(values)
+        .then(data => {
+          form.set({ name: "", organization: "", message: "" })
+          sendEmail(data)
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    }
+  })
+  $: form_button_active = Boolean($form.name.length && $form.message.length)
 </script>
 
 <section class={GLOBAL_CLASSES.PADDED_SECTION}>
   <h3>Por Correo Electrónico</h3>
-  <form action="">
+  <form on:submit={handleSubmit}>
     <label>
       Nombre o correo electrónico
-      <input placeholder="someone@example.com" type="text">
+      <input placeholder="someone@example.com" type="text" on:change={handleChange} bind:value={$form.name}>
     </label>
     <label>
       Empresa (Opcional)
-      <input placeholder="Nombre de tu empresa" type="text">
+      <input placeholder="Nombre de tu empresa" type="text" on:change={handleChange} bind:value={$form.organization}>
     </label>
     <label>
       Mensaje
-      <textarea placeholder="Escribe un mensaje para ponernos en contacto"></textarea>
+      <textarea placeholder="Escribe un mensaje para ponernos en contacto" on:change={handleChange} bind:value={$form.message} />
     </label>
     <span class="tip">
       * También puedes enviarme un correo electrónico directamente: <CopyableText text="ariagt191000@gmail.com" iconSize={.9}><strong>ariagt191000@gmail.com</strong></CopyableText>
     </span>
     <div class="button-section">
-      <Button onClick={() => null} text="Enviar" />
+      <Button text="Enviar" type="submit" disabled={ !form_button_active || $isSubmitting } />
     </div>
   </form>
 </section>
@@ -47,6 +78,7 @@
     background-color: var(--white);
     padding: var(--rem) calc( var(--rem) * 2 );
     height: calc( var(--rem) * 14 );
+    margin-top: var(--rem);
     resize: none;
     width: 100%;
     color: var(--black);
