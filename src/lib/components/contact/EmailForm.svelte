@@ -5,6 +5,9 @@
   import * as yup from "yup"
   import { createForm } from "svelte-forms-lib"
 
+  let form_button_active = false
+  let recent_email_sended = false
+
   const validationSchema = yup.object().shape({
     name: yup.string().required('Please enter a name'),
     organization: yup.string().optional(),
@@ -14,9 +17,10 @@
   /** @type { (config: { name: string, organization?: string, message: string }) => Promise<void> } */
   const sendEmail = async ({ name, organization, message }) =>
     axios.post('/api/send-email', { name, organization, message })
-      .then(() => console.log('EMAIL ENVIADO'))
-
-  let form_button_active = false
+      .then(() => {
+        recent_email_sended = true
+        setTimeout(() => recent_email_sended = false, 4000)
+      })
 
   const { form, handleChange, handleSubmit, isSubmitting } = createForm({
     initialValues: { name: "", organization: "", message: "" },
@@ -53,6 +57,7 @@
       * También puedes enviarme un correo electrónico directamente: <CopyableText text="ariagt191000@gmail.com" iconSize={.9}><strong>ariagt191000@gmail.com</strong></CopyableText>
     </span>
     <div class="button-section">
+      <p style:opacity={ recent_email_sended ? 1 : 0 }><i class="fa-solid fa-envelope-circle-check" /> !Enviado!</p>
       <Button text="Enviar" type="submit" disabled={ !form_button_active || $isSubmitting } />
     </div>
   </form>
@@ -85,9 +90,16 @@
   }
 
   .button-section {
-    display: inline;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--rem);
     width: 100%;
     margin-top: calc( var(--rem) * 2 );
+  }
+
+  .button-section p {
+    margin: 0 auto;
+    transition: opacity .2s var(--transition-type);
   }
 
   .tip {
@@ -102,6 +114,9 @@
 
   @media (width >= 600px) {
     .button-section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       width: initial;
       align-self: flex-end;
     }
