@@ -1,5 +1,9 @@
 {
+  "general": {
+    "see_more": "See more"
+  },
   "nav": {
+    "home": "Home",
     "about": "About",
     "portfolio": "Portfolio",
     "contact": "Contact"
@@ -87,8 +91,10 @@
           "4": "ClickUp"
         }
       }
-    },
-    "home_button": "Discover all"
+    }
+  },
+  "portfolio": {
+    "title": "My projects"
   },
   "footer": {
     "email": "Email",

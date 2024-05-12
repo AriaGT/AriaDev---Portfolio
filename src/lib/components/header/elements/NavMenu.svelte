@@ -100,14 +100,14 @@
   .logo-text {
     line-height: 1.4;
     color: var(--white);
-    margin-bottom: 0.875rem;
+    margin-bottom: 0.7rem;
     font-family: var(--bold-font);
   }
   .button {
     cursor: pointer;
     color: var(--light-gray);
-    margin-bottom: 0.875rem;
-    font-size: calc( var(--rem) * .875 );
+    margin-bottom: 0.7rem;
+    font-size: calc( var(--rem) * 1.1 );
     transition: color 125ms var(--transition-type);
   }
   .button:hover {
@@ -163,15 +163,15 @@
   }
   @media (width < 768px) {
     .logo-icon {
-      width: calc( var(--rem) * 6 );
+      width: calc( var(--rem) * 5 );
     }
     .logo-text {
-      font-size: calc( var(--rem) * 2.1 );
-      margin-bottom: calc( var(--rem) * 1.2 );
+      font-size: calc( var(--rem) * 2 );
+      margin-bottom: calc( var(--rem) * .7 );
     }
     .button {
-      font-size: calc( var(--rem) * 1.8 );
-      margin-bottom: calc( var(--rem) * 1.2 );
+      font-size: calc( var(--rem) * 1.4 );
+      margin-bottom: calc( var(--rem) * .85 );
     }
     .button--nav-button {
       display: block;
@@ -179,7 +179,7 @@
     .nav-menu {
       position: relative;
       height: calc( var(--rem) * 8 );
-      padding: var(--rem) calc( var(--rem) * 1 );
+      padding: var(--rem) calc( var(--rem) * 4 );
     }
     .nav-list {
       pointer-events: all;

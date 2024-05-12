@@ -1,1 +1,1 @@
-/** @typedef { 'about' | 'portfolio' |  'contact' } NavItem */
+/** @typedef { '' | 'about' | 'portfolio' |  'contact' } NavItem */

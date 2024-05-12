@@ -1,5 +1,9 @@
 export const LangKeys = {
+  general: {
+    see_more: "general.see_more",
+  },
   nav: {
+    '': "nav.home",
     about: "nav.about",
     portfolio: "nav.portfolio",
     contact: "nav.contact",
@@ -85,8 +89,10 @@ export const LangKeys = {
           "skills.skills_list.4.skill_items.4",
         ]
       },
-    ],
-    home_button: "skills.home_button"
+    ]
+  },
+  portfolio: {
+    title: "portfolio.title"
   },
   footer: {
     email: "footer.email",

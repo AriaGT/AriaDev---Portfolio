@@ -1,2 +1,2 @@
 /** @type { NavItem[] } */
-export const NavItems = ['about', 'portfolio', 'contact']
+export const NavItems = ['', 'about', 'portfolio', 'contact']
